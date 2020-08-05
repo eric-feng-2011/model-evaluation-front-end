@@ -163,7 +163,7 @@ export default class FileUploader extends React.PureComponent {
                 method: 'POST',
                 headers: {
                     'endpoint-name': process.env.REACT_APP_ENDPOINT_NAME,
-                    'mvs-info': process.env.REACT_APP_MVS_INFO
+                    'mvs-info': JSON.stringify(process.env.REACT_APP_MVS_INFO)
                 },
                 body: file
             });
