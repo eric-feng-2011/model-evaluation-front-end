@@ -1,0 +1,31 @@
+/*!
+ * Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ */
+
+.image-inference {
+  :global {
+    span.action-link {
+      text-decoration: underline;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--awsui-color-orange-500);
+      }
+    }
+
+    .image-and-context {
+      display: flex;
+
+      > .main-area {
+        flex: 1;
+      }
+
+      > .context-area {
+        flex: initial;
+        width: 250px;
+        padding-left: 16px;
+        padding-right: 10px;
+      }
+    }
+  }
+}

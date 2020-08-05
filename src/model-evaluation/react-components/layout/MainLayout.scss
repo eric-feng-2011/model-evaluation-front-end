@@ -1,0 +1,46 @@
+
+.main-layout {
+  :global {
+
+    .overview {
+      display: flex;
+
+      .description {
+        padding-right: 3rem;
+      }
+
+      & > .text {
+        flex: auto;
+      }
+
+      & > .buttons {
+        flex: none;
+        width: 20rem;
+
+        //Polaris doesn't currently support 'stretch' property for buttons.
+        //Super-ugly hack to force full width
+        awsui-button {
+          width: 100%;
+          box-sizing: border-box;
+
+          > a {
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+          }
+
+          & + awsui-button {
+            margin: 1rem 0 0;
+          }
+        }
+      }
+    }
+
+    .disclaimer {
+      color: var(--awsui-color-text-form-secondary, #687078);
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+    }
+
+  }
+}

@@ -1,0 +1,35 @@
+
+.raw-response {
+  :global {
+    .responseValue {
+      > textarea {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid gray;
+        padding: 1rem;
+
+        font-family: Monaco, Menlo, Consolas, 'Courier Prime', Courier, 'Courier New', monospace;
+
+        min-height: 100px;
+        max-height: 750px;
+        resize: vertical;
+      }
+
+      &.empty {
+        position: relative;
+
+        &:after {
+          content: "– Model response was empty –";
+          color: var(--awsui-color-text-empty);
+
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+        }
+      }
+    }
+  }
+}

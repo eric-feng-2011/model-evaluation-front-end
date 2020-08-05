@@ -1,0 +1,53 @@
+/*!
+ * Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ */
+
+.image-renderer {
+  position: relative;
+
+  border: 1px solid grey;
+  //max-height: 600px; //enforced by the canvas renderer
+
+  :global {
+    canvas {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      height: auto;
+
+      background-color: #bebebe;
+    }
+
+    .info-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.overlay {
+        background-color: rgba(0,0,0, 0.65);
+        color: white;
+
+        awsui-spinner {
+          vertical-align: middle;
+          margin-right: 1rem;
+        }
+      }
+
+      &.placeholder {
+        background-color: white;
+
+        > .content {
+          font-weight: 700;
+          font-size: 1.5rem;
+          color: var(--awsui-color-grey-550);
+        }
+      }
+    }
+  }
+}
